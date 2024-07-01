@@ -1,0 +1,14 @@
+#! configuration/base.yaml
+application:
+  port: 8000
+  idempotency_lifetime_minutes: 60
+database:
+  username: "postgres"
+  password: "password"
+  database_name: "newsletter"
+emailclient:
+  sender_email: "noreply@ilkablumentritt.de"
+  timeout_milliseconds: 10000
+  n_retries: 10
+  # currently 1h 
+  execute_retry_after_milliseconds: 3600000

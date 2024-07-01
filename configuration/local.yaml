@@ -1,0 +1,15 @@
+#! #! configuration/local.yaml
+application:
+  host: "127.0.0.1"
+  base_url: "http://127.0.0.1:8000"
+  # set this via APP_APPLICATION__HMAC_SECRET
+  hmac_secret: "long-and-very-secret-random-key-needed-to-verify-message-integrity"
+database:
+  host: "192.168.178.3"
+  port: 5434
+  require_ssl: false
+emailclient:
+  base_url: "http://127.0.0.1"
+  # set this via APP_EMAILCLIENT__TOKEN
+  token: "POSTMARK_API_TEST"
+redis_uri: "redis://192.168.178.3:6379"

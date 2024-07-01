@@ -1,0 +1,11 @@
+#! #! configuration/production.yaml
+application:
+  host: 0.0.0.0
+  base_url: "https://ddc_tournement_planer.drflowerkick.duckdns.org:443"
+database:
+  host: "192.168.178.3"
+  port: 5436
+  require_ssl: false
+emailclient:
+  base_url: "https://api.postmarkapp.com"
+redis_uri: "redis://192.168.178.3:6379"
