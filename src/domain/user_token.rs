@@ -28,24 +28,17 @@ impl UserToken {
     }
     /// check if any char of user_token is not alphanumeric
     pub fn is_valid(&self) -> Result<&str, ValidationError> {
-        if self
-            .user_token
-            .chars()
-            .any(|c| !c.is_alphanumeric())
+        if self.user_token.chars().any(|c| !c.is_alphanumeric())
             || self.user_token.chars().count() != 25
         {
-            Err(ValidationError::InvalidToken(
-                self.user_token.to_owned(),
-            ))
+            Err(ValidationError::InvalidToken(self.user_token.to_owned()))
         } else {
             Ok(&self.user_token)
         }
     }
     /// parse string as token
     pub fn parse(s: String) -> Result<UserToken, ValidationError> {
-        let user_token = Self {
-            user_token: s,
-        };
+        let user_token = Self { user_token: s };
         user_token.is_valid()?;
         Ok(user_token)
     }
