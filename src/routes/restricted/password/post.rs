@@ -19,5 +19,5 @@ pub async fn change_password(
     // than change password in db
     change_password_in_db(*user_id, form.0.new_password, &pool).await?;
     FlashMessage::info("Your password has been changed.").send();
-    Ok(see_other("/admin/password"))
+    Ok(see_other("/restricted/password"))
 }

@@ -39,5 +39,5 @@ pub async fn login(
     tracing::Span::current().record("user_id", &tracing::field::display(&user_id));
     session.renew();
     session.insert_user_id(user_id)?;
-    Ok(see_other("/admin/dashboard"))
+    Ok(see_other("/restricted/dashboard"))
 }

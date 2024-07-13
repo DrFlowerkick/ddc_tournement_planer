@@ -5,7 +5,7 @@ application:
 database:
   username: "postgres"
   password: "password"
-  database_name: "newsletter"
+  database_name: "ddc_tournement_planer"
 emailclient:
   sender_email: "noreply@ilkablumentritt.de"
   timeout_milliseconds: 10000
