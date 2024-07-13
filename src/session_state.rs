@@ -1,6 +1,6 @@
 //! src/sessionn_state.rs
 
-use crate::error::{error_chain_fmt, Error, AppResult};
+use crate::error::{error_chain_fmt, AppResult, Error};
 use actix_session::{Session, SessionExt};
 use actix_web::{dev::Payload, FromRequest, HttpRequest};
 use std::future::{ready, Ready};

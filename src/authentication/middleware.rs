@@ -1,6 +1,6 @@
 //! src/authentication/middleware.rs
 
-use crate::error::{Error, AppResult};
+use crate::error::{AppResult, Error};
 use crate::session_state::{SessionError, TypedSession};
 use actix_web::{
     body::MessageBody,

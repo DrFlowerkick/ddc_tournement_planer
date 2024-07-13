@@ -1,0 +1,20 @@
+<!-- /templates/dashboard.html -->
+{% extends "base.html" %}
+
+{% block title %}restricted user dashboard{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <p>Welcome {{username}}!</p>
+    <p>Available actions:</p>
+    <ol>
+        <li><a href="/restricted/password">Change password</a></li>
+        <li>
+            <form name="logoutForm" action="/restricted/logout" method="post">
+                <input type="submit" value="Logout">
+            </form>
+        </li>
+    </ol>
+{% endblock %}

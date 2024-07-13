@@ -1,0 +1,31 @@
+<!-- /templates/login.html -->
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <p>Please enter your login informations.</p>
+    {% for message in flash_messages %}
+        <p><i>{{message|e}}</i></p>
+    {% endfor %}
+    <form action="/login" method="post">
+        <label>Username
+            <input
+                type="text"
+                placeholder="Enter Username"
+                name="username"
+            >
+        </label>
+        <label>Password
+            <input
+                type="password"
+                placeholder="Enter Password"
+                name="password"
+            >
+        </label>
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
